@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container-lg">
+        <div class="title d-flex align-items-center flex-md-row  flex-column justify-content-md-between">
+            <h1 class="grediant">Prodacts Mangment System</h1>
+            <div class="form-floating m-3" data-mdb-input-init>
+                <input oninput="serchProducts()" type="search" class="form-control" id="serchInput" placeholder="serch">
+                <label class="form-label" for="serchInput">serch</label>
+              </div>
+        </div>
+        <div class="mx-auto">
+            <div class="form-group">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="prodactName" placeholder="prodact name">
+                    <label for="prodactName">Prodact Name</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="prodactPrice" placeholder="prodact Price">
+                    <label for="prodactPrice">prodact Price</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="category" placeholder="category">
+                    <label for="category">prodact caregory</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <textarea class="form-control" id="desc" placeholder="Prodact Descreption"></textarea>
+                    <label for="desc">prodact Descreption</label>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input type="file" accept="image/*" class="form-control" id="prodactImg" placeholder="prodactImg">
+                  </div>
+                  <button id="addbtn" onclick="addProdact()" class="btn btn-dark">Add Prodact <i class="fa-solid fa-plus"></i></button>
+                  <button id="updatebtn" onclick="updateProdact()" class="btn btn-success d-none">Update <i class="fa-solid fa-check"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="container py-5">
+        <div class="row gy-4" id="rowData">
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
